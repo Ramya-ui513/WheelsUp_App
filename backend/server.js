@@ -3,8 +3,11 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { requireAuth } from '@clerk/express';
 import categorySeeder from './routes/categorySeeder.js';
+import connectDB from "./config/db.js";
 
 dotenv.config();
+
+await connectDB();
 
 const app = express();
 app.use(cors());
