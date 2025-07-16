@@ -1,24 +1,22 @@
-// src/components/Navbar.jsx
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useUser, SignOutButton } from '@clerk/clerk-react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const { isSignedIn } = useUser();
   const navigate = useNavigate();
+  const username = localStorage.getItem("username");
 
-  // Handle logout logic
   const handleLogout = () => {
+    localStorage.removeItem("username");
     localStorage.removeItem("access_token");
-    navigate('/');
+    navigate('/login');
   };
 
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">
+      <Link to="/" className="logo-section">
         <img src="/images/Logo.jpg" alt="Logo" className="logo-img" />
-        WheelsUp
+        <span className="brand">WheelsUp</span>
       </Link>
 
       <div className="nav-links">
@@ -26,15 +24,11 @@ const Navbar = () => {
         <Link to="/store">Store Location</Link>
         <Link to="/help">Help</Link>
 
-        {isSignedIn ? (
+        {username ? (
           <>
             <Link to="/products">Products</Link>
             <Link to="/cart">Cart</Link>
-
-            {/* Correct way to attach callback in Clerk */}
-            <SignOutButton>
-              <button className="logout-btn" onClick={handleLogout}>Logout</button>
-            </SignOutButton>
+            <button className="logout-btn" onClick={handleLogout}>Logout</button>
           </>
         ) : (
           <>

@@ -1,4 +1,3 @@
-/* Navbar.css - Fully enhanced and responsive navbar */
 
 .navbar {
   display: flex;
@@ -54,7 +53,6 @@
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
