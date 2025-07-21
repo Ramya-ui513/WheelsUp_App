@@ -67,7 +67,7 @@ const CartPage = () => {
         color: '#fff',
       }}
     >
-      <h2>🛒 {username ? `${username}'s` : 'Your'} Cart</h2>
+      <h2>{username ? `${username}'s` : 'Your'} Cart</h2>
 
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
@@ -81,7 +81,7 @@ const CartPage = () => {
                   <h4>{item.name || item.product_name}</h4>
                   <p>Price: €{item.price}</p>
                   <button className="remove-btn" onClick={() => handleRemove(item._id)}>
-                    🗑️ Remove
+                    Remove
                   </button>
                 </div>
               </li>
@@ -99,7 +99,7 @@ const CartPage = () => {
               value={addressText}
               onChange={(e) => setAddressText(e.target.value)}
             />
-            <button onClick={handleSaveAddress}>💾 Save Address</button>
+            <button onClick={handleSaveAddress}>Save Address</button>
           </div>
 
           {showCheckout && (

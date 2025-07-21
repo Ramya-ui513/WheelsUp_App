@@ -1,7 +1,6 @@
-/* 📄 src/pages/Cart.css */
 
 .cart-container {
-  background-image: url('../assets/cart.jpg'); /* path may vary */
+  background-image: url('../assets/cart.jpg'); 
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -9,19 +8,17 @@
   color: #000;
 }
 
-/* Box around content for better readability */
 .cart-list,
 .cart-summary,
 .address-section,
 .checkout-section {
-  background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+  background-color: rgba(255, 255, 255, 0.95); 
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
-  color: #000; /* Black text for readability */
+  color: #000; 
 }
 
-/* Cart item image and layout */
 .cart-item {
   display: flex;
   align-items: center;
@@ -48,7 +45,6 @@
   font-weight: bold;
 }
 
-/* Buttons */
 .remove-btn,
 .checkout-btn,
 .address-section button {
