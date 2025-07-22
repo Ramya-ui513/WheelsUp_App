@@ -1,6 +1,5 @@
 import User from '../models/User.js';
 
-
 export const registerUser = async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -46,4 +45,3 @@ export const loginUser = async (req, res) => {
     res.status(500).json({ error: 'Server error during login' });
   }
 };
-

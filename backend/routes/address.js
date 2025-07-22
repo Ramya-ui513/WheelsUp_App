@@ -1,5 +1,5 @@
 import express from 'express';
-import Address from '../models/Address.js';
+import Address from '../models/address.js';
 
 const router = express.Router();
 

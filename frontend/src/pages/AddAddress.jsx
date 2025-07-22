@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import './AddAddress.css';
 import axios from '../utils/axiosInstance';
@@ -33,7 +32,7 @@ const AddAddress = () => {
       alert('Address saved successfully!');
       navigate('/cart');
     } catch (err) {
-      console.error('Error saving address:', err);
+      console.error(' Error saving address:', err);
       alert('Failed to save address.');
     }
   };

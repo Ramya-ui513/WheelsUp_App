@@ -24,12 +24,11 @@ const CheckoutPage = () => {
         const cartData = await cartRes.json();
         if (cartRes.ok) setCartItems(cartData);
 
-        // 2. Get Address
         const addrRes = await fetch(`http://localhost:8000/api/address?username=${username}`);
         const addrData = await addrRes.json();
         if (addrRes.ok) setAddress(addrData.address_text);
       } catch (err) {
-        console.error("Error fetching cart/address:", err);
+        console.error(" Error fetching cart/address:", err);
       }
     };
 

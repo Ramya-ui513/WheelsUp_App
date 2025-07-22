@@ -17,7 +17,7 @@ const Help = () => {
         </div>
 
         <div className="help-section">
-          <h3>Order & Delivery</h3>
+          <h3>🛒 Order & Delivery</h3>
           <ul>
             <li>Orders ship within 3–5 business days.</li>
             <li>Delivery updates are sent via email and can be tracked in Profile.</li>
@@ -33,7 +33,7 @@ const Help = () => {
         </div>
 
         <div className="help-section">
-          <h3>Contact Us</h3>
+          <h3>📞 Contact Us</h3>
           <p>
             Email: <a href="mailto:support@wheelsup.com">support@wheelsup.com</a><br />
             Phone: +353-87-478-6869<br />

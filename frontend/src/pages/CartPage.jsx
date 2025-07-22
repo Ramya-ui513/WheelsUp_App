@@ -67,7 +67,7 @@ const CartPage = () => {
         color: '#fff',
       }}
     >
-      <h2>{username ? `${username}'s` : 'Your'} Cart</h2>
+      <h2>🛒 {username ? `${username}'s` : 'Your'} Cart</h2>
 
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
@@ -93,13 +93,13 @@ const CartPage = () => {
           </div>
 
           <div className="address-section">
-            <h3> Delivery Address</h3>
+            <h3>Delivery Address</h3>
             <textarea
               placeholder="Enter your delivery address"
               value={addressText}
               onChange={(e) => setAddressText(e.target.value)}
             />
-            <button onClick={handleSaveAddress}>Save Address</button>
+            <button onClick={handleSaveAddress}> Save Address</button>
           </div>
 
           {showCheckout && (

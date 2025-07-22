@@ -17,7 +17,6 @@ router.get('/seed', async (req, res) => {
       description: "High-suspension beast for wild terrains.",
       imageUrl: "/images/Blaze Monster X – Monster Truck.jpg",
     },
-    // Add more entries...
   ];
 
   await Category.deleteMany();

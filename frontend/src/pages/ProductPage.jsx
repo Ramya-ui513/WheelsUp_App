@@ -83,7 +83,7 @@ const ProductPage = () => {
               <img src={imageMap[prod.image] || prod.image} alt={prod.name} />
               <h3>{prod.name}</h3>
               <p>Price: €{prod.price}</p>
-              <button onClick={() => handleAddToCart(prod)}>🛒 Add to Cart</button>
+              <button onClick={() => handleAddToCart(prod)}>Add to Cart</button>
             </div>
           ))}
         </div>

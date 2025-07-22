@@ -14,7 +14,7 @@ const OrderSuccessPage = () => {
   const generateInvoicePDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(16);
-    doc.text('Order Invoice', 20, 20);
+    doc.text('🧾 Order Invoice', 20, 20);
 
     doc.setFontSize(12);
     doc.text(`Customer: ${userEmail}`, 20, 35);
@@ -37,14 +37,14 @@ const OrderSuccessPage = () => {
     ).join('');
 
     const html = `
-      <h2>Order Invoice</h2>
+      <h2>🧾 Order Invoice</h2>
       <p><strong>Username:</strong> ${userEmail}</p>
       <p><strong>Address:</strong> ${address}</p>
       <ul>${itemList}</ul>
       <p><strong>Total:</strong> €${total.toFixed(2)}</p>
     `;
 
-    console.log("Sending Email with:", {
+    console.log("📤 Sending Email with:", {
       username: userEmail,
       subject: 'Your Order Invoice - WheelsUp',
       html
@@ -69,7 +69,7 @@ const OrderSuccessPage = () => {
       alert(`Failed to send email. ${data.message || ''}`);
     }
   } catch (err) {
-    console.error("Email error:", err);
+    console.error(" Email error:", err);
     alert('Failed to send email.');
   }
 };

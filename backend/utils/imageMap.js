@@ -1,4 +1,3 @@
-// frontend/utils/imageMap.js
 import BeastCrusher from '../assets/Beast Crusher XL – Monster Truck.jpg';
 import BlazeMonster from '../assets/Blaze Monster X – Monster Truck.jpg';
 import CircuitBullet from '../assets/Circuit Bullet – Track Champion.jpg';

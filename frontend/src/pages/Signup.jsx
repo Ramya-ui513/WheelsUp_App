@@ -23,7 +23,7 @@ const Signup = () => {
       alert('Signup successful!');
       navigate('/login');
     } catch (err) {
-      alert('Signup failed. Please try again.');
+      alert(' Signup failed. Please try again.');
     }
   };
 
