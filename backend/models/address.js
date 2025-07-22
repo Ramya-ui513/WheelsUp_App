@@ -1,4 +1,4 @@
-// models/Address.js
+// models/address.js
 import mongoose from 'mongoose';
 
 const addressSchema = new mongoose.Schema({
