@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import Product from './models/product.js';
+import Products from './models/Products.js';
 
 dotenv.config();
 
@@ -8,7 +8,7 @@ const seedProducts = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
 
-    await Product.deleteMany();
+    await Products.deleteMany();
 
     const products = [
       {
@@ -114,7 +114,7 @@ const seedProducts = async () => {
       },
     ];
 
-    await Product.insertMany(products);
+    await Products.insertMany(products);
     console.log('Products seeded successfully!');
     process.exit();
   } catch (err) {
