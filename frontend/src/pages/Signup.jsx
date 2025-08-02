@@ -19,7 +19,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/auth/signup', formData);
+      await axios.post('https://wheelsup-app.onrender.com/api/auth/signup', formData);
       alert('Signup successful!');
       navigate('/login');
     } catch (err) {

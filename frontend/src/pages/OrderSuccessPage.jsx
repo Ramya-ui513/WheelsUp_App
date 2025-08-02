@@ -50,7 +50,7 @@ const OrderSuccessPage = () => {
       html
     });
 
-    const res = await fetch('http://localhost:8000/api/email/send-invoice', {
+    const res = await fetch('https://wheelsup-app.onrender.com/api/email/send-invoice', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

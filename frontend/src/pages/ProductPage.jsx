@@ -13,7 +13,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://localhost:8000/api/products');
+        const res = await fetch('https://wheelsup-app.onrender.com/api/products');
         const data = await res.json();
         setProducts(data);
       } catch (err) {
@@ -34,7 +34,7 @@ const ProductPage = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:8000/api/cart/', {
+      const res = await fetch('https://wheelsup-app.onrender.com/api/cart/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

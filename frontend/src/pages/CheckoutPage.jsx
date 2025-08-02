@@ -20,11 +20,11 @@ const CheckoutPage = () => {
 
     const fetchData = async () => {
       try {
-        const cartRes = await fetch(`http://localhost:8000/api/cart/items?username=${username}`);
+        const cartRes = await fetch(`https://wheelsup-app.onrender.com/api/cart/items?username=${username}`);
         const cartData = await cartRes.json();
         if (cartRes.ok) setCartItems(cartData);
 
-        const addrRes = await fetch(`http://localhost:8000/api/address?username=${username}`);
+        const addrRes = await fetch(`https://wheelsup-app.onrender.com/api/address?username=${username}`);
         const addrData = await addrRes.json();
         if (addrRes.ok) setAddress(addrData.address_text);
       } catch (err) {
@@ -39,7 +39,7 @@ const CheckoutPage = () => {
 
   const handlePlaceOrder = async () => {
     try {
-      const clearRes = await fetch(`http://localhost:8000/api/cart/clear?username=${username}`, {
+      const clearRes = await fetch(`https://wheelsup-app.onrender.com/api/cart/clear?username=${username}`, {
         method: "DELETE",
       });
 

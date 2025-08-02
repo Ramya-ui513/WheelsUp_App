@@ -46,7 +46,7 @@ export const CartProvider = ({ children }) => {
 
   const syncCartToBackend = async (userId) => {
     try {
-      const res = await axios.post('http://localhost:8000/api/cart/sync', {
+      const res = await axios.post('https://wheelsup-app.onrender.com/api/cart/sync', {
         username: userId,
         cartItems,
       });
