@@ -11,11 +11,11 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
+    encrypted_Password = await bcrypt.hash(this.password, 10);
     try {
       const res = await axios.post('https://wheelsup-app.onrender.com/api/auth/login', {
         username,
-        password,
+        encrypted_Password,
       });
 
       alert(res.data.message); 
