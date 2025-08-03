@@ -11,22 +11,6 @@ const seedProducts = async () => {
     await Products.deleteMany();
 
     const products = [
-      {
-        name: 'Nitro Racer',
-        image: 'https://i.imgur.com/Z5n6RgR.png',
-        price: 10.99,
-      },
-      {
-        name: 'Speed Blazer',
-        image: 'https://i.imgur.com/XFpzzj1.png',
-        price: 12.49,
-      },
-      {
-        name: 'Turbo Titan',
-        image: 'https://i.imgur.com/xI0JSF1.png',
-        price: 9.75,
-      },
-
       
       {
         name: "Beast Crusher XL",
