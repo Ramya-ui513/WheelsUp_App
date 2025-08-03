@@ -28,10 +28,9 @@ export const loginUser = async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    if (existingUser.password !== password) {
+    if (!(await existingUser.comparePassword(password))) {
       return res.status(401).json({ error: 'Invalid password' });
     }
-
     res.status(200).json({
       message: 'Login successful',
       user: {
